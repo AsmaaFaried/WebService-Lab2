@@ -41,7 +41,7 @@ class ApiHelper{
         $this->url=$_SERVER["REQUEST_URI"];
         $pieces=explode("/",$this->url);
         $allowed=array("items","users","employees");
-        $this->resource=in_array($pieces[5],$allowed)?$pieces[6]:"";
+        $this->resource=in_array($pieces[5],$allowed)?$pieces[5]:"";
         if(isset($pieces[6])){
             $this->resource_id =is_numeric($pieces[6])?$pieces[6]:-1;
         }
